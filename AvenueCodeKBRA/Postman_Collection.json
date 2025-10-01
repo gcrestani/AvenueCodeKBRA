@@ -1,0 +1,215 @@
+{
+    "info": {
+        "_postman_id": "xml-conversion-api-collection",
+        "name": "XML Conversion API",
+        "description": "Collection for testing the XML Conversion API endpoints",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Convert JSON to XML - Valid Request",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"Id\": \"TCnWpDVD\",\n  \"ReportMetadata\": {\n    \"Title\": \"Document for Publication > Best Report Yet!!\",\n    \"ContactSection\": [\n      {\n        \"ContactInformation\": [\n          {\n            \"ContactHeader\": \"Media Contact\",\n            \"Contacts\": [\n              {\n                \"FirstName\": \"Mike\",\n                \"LastName\": \"Johnsen\",\n                \"Email\": \"mike.johnsen@kbra.com\",\n                \"Title\": \"Director of Communications & Marketing\",\n                \"PhoneNumber\": \"+1 646-731-1347\",\n                \"Accreditation\": \"CM&AA\"\n              },\n              {\n                \"FirstName\": \"\",\n                \"LastName\": \"\",\n                \"Email\": \"\",\n                \"Title\": \"\",\n                \"PhoneNumber\": \"\",\n                \"Accreditation\": \"\"\n              }\n            ]\n          }\n        ]\n      }\n    ]\n  },\n  \"CountryIds\": [\"US\"],\n  \"Title\": \"Document for Publication > Best Report Yet!!\",\n  \"PublishDate\": \"2024-08-26T18:19:59Z\",\n  \"Status\": 3,\n  \"TestRun\": false\n}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/api/XmlConversion/convert",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "api",
+                        "XmlConversion",
+                        "convert"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Convert JSON to XML - Invalid Status",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"Id\": \"TCnWpDVD\",\n  \"ReportMetadata\": {\n    \"Title\": \"Document for Publication > Best Report Yet!!\",\n    \"ContactSection\": [\n      {\n        \"ContactInformation\": [\n          {\n            \"ContactHeader\": \"Media Contact\",\n            \"Contacts\": [\n              {\n                \"FirstName\": \"Mike\",\n                \"LastName\": \"Johnsen\",\n                \"Email\": \"mike.johnsen@kbra.com\",\n                \"Title\": \"Director of Communications & Marketing\",\n                \"PhoneNumber\": \"+1 646-731-1347\",\n                \"Accreditation\": \"CM&AA\"\n              }\n            ]\n          }\n        ]\n      }\n    ]\n  },\n  \"CountryIds\": [\"US\"],\n  \"Title\": \"Document for Publication > Best Report Yet!!\",\n  \"PublishDate\": \"2024-08-26T18:19:59Z\",\n  \"Status\": 2,\n  \"TestRun\": false\n}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/api/XmlConversion/convert",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "api",
+                        "XmlConversion",
+                        "convert"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Convert JSON to XML - Invalid Publish Date",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"Id\": \"TCnWpDVD\",\n  \"ReportMetadata\": {\n    \"Title\": \"Document for Publication > Best Report Yet!!\",\n    \"ContactSection\": [\n      {\n        \"ContactInformation\": [\n          {\n            \"ContactHeader\": \"Media Contact\",\n            \"Contacts\": [\n              {\n                \"FirstName\": \"Mike\",\n                \"LastName\": \"Johnsen\",\n                \"Email\": \"mike.johnsen@kbra.com\",\n                \"Title\": \"Director of Communications & Marketing\",\n                \"PhoneNumber\": \"+1 646-731-1347\",\n                \"Accreditation\": \"CM&AA\"\n              }\n            ]\n          }\n        ]\n      }\n    ]\n  },\n  \"CountryIds\": [\"US\"],\n  \"Title\": \"Document for Publication > Best Report Yet!!\",\n  \"PublishDate\": \"2024-08-20T18:19:59Z\",\n  \"Status\": 3,\n  \"TestRun\": false\n}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/api/XmlConversion/convert",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "api",
+                        "XmlConversion",
+                        "convert"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Convert JSON to XML - TestRun True",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"Id\": \"TCnWpDVD\",\n  \"ReportMetadata\": {\n    \"Title\": \"Document for Publication > Best Report Yet!!\",\n    \"ContactSection\": [\n      {\n        \"ContactInformation\": [\n          {\n            \"ContactHeader\": \"Media Contact\",\n            \"Contacts\": [\n              {\n                \"FirstName\": \"Mike\",\n                \"LastName\": \"Johnsen\",\n                \"Email\": \"mike.johnsen@kbra.com\",\n                \"Title\": \"Director of Communications & Marketing\",\n                \"PhoneNumber\": \"+1 646-731-1347\",\n                \"Accreditation\": \"CM&AA\"\n              }\n            ]\n          }\n        ]\n      }\n    ]\n  },\n  \"CountryIds\": [\"US\"],\n  \"Title\": \"Document for Publication > Best Report Yet!!\",\n  \"PublishDate\": \"2024-08-26T18:19:59Z\",\n  \"Status\": 3,\n  \"TestRun\": true\n}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/api/XmlConversion/convert",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "api",
+                        "XmlConversion",
+                        "convert"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Convert JSON to XML - Multiple Countries",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"Id\": \"TCnWpDVD\",\n  \"ReportMetadata\": {\n    \"Title\": \"Document for Publication > Best Report Yet!!\",\n    \"ContactSection\": [\n      {\n        \"ContactInformation\": [\n          {\n            \"ContactHeader\": \"Media Contact\",\n            \"Contacts\": [\n              {\n                \"FirstName\": \"Mike\",\n                \"LastName\": \"Johnsen\",\n                \"Email\": \"mike.johnsen@kbra.com\",\n                \"Title\": \"Director of Communications & Marketing\",\n                \"PhoneNumber\": \"+1 646-731-1347\",\n                \"Accreditation\": \"CM&AA\"\n              }\n            ]\n          }\n        ]\n      }\n    ]\n  },\n  \"CountryIds\": [\"US\", \"CA\", \"MX\"],\n  \"Title\": \"Document for Publication > Best Report Yet!!\",\n  \"PublishDate\": \"2024-08-26T18:19:59Z\",\n  \"Status\": 3,\n  \"TestRun\": false\n}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/api/XmlConversion/convert",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "api",
+                        "XmlConversion",
+                        "convert"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Convert JSON to XML - Empty Contact",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"Id\": \"TCnWpDVD\",\n  \"ReportMetadata\": {\n    \"Title\": \"Document for Publication > Best Report Yet!!\",\n    \"ContactSection\": [\n      {\n        \"ContactInformation\": [\n          {\n            \"ContactHeader\": \"Media Contact\",\n            \"Contacts\": [\n              {\n                \"FirstName\": \"\",\n                \"LastName\": \"\",\n                \"Email\": \"\",\n                \"Title\": \"\",\n                \"PhoneNumber\": \"\",\n                \"Accreditation\": \"\"\n              }\n            ]\n          }\n        ]\n      }\n    ]\n  },\n  \"CountryIds\": [\"US\"],\n  \"Title\": \"Document for Publication > Best Report Yet!!\",\n  \"PublishDate\": \"2024-08-26T18:19:59Z\",\n  \"Status\": 3,\n  \"TestRun\": false\n}"
+                },
+                "url": {
+                    "raw": "{{base_url}}/api/XmlConversion/convert",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "api",
+                        "XmlConversion",
+                        "convert"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Convert JSON File to XML File",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "formdata",
+                    "formdata": [
+                        {
+                            "key": "file",
+                            "type": "file",
+                            "src": "SampleInput.json",
+                            "description": "Upload JSON file to convert to XML"
+                        }
+                    ]
+                },
+                "url": {
+                    "raw": "{{base_url}}/api/XmlConversion/convert-file",
+                    "host": [
+                        "{{base_url}}"
+                    ],
+                    "path": [
+                        "api",
+                        "XmlConversion",
+                        "convert-file"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ],
+    "variable": [
+        {
+            "key": "base_url",
+            "value": "https://localhost:7000",
+            "type": "string"
+        }
+    ]
+}
